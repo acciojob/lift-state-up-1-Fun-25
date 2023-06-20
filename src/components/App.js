@@ -15,7 +15,7 @@ export default function App() {
         <Child show={showModal}>
           <div>
             <h4>Modal Content</h4>
-            <p>This is the modal content.</p>
+            <h3>This is the modal content.</h3>
           </div>
         </Child>
       </div>
