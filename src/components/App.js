@@ -1,13 +1,33 @@
+import "./../styles/App.css";
+import { useState } from "react";
 
-import React from "react";
-import './../styles/App.css';
+export default function App() {
+  const [showModal, setShowModal] = useState(false);
 
-const App = () => {
   return (
-    <div>
-        {/* Do not remove the main div */}
+    <div className="parent">
+      <h1>Parent Component</h1>
+      <div className="child">
+        <h2>Child Component</h2>
+        <button onClick={() => setShowModal(true)}>Show Modal</button>
+        <Child show={showModal}>
+          <div>
+            <h4>Modal Content</h4>
+            <p>This is the modal content.</p>
+          </div>
+        </Child>
+      </div>
     </div>
-  )
+  );
 }
 
-export default App
+const Child = ({ show,children }) => {
+  if(!show) return null;
+  return (
+    <div className="child">
+      <h4>Child Component</h4>
+       
+      <div>{children}</div>
+    </div>
+  );
+};
