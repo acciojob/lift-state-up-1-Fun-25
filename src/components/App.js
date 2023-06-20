@@ -1,5 +1,7 @@
 import "./../styles/App.css";
+import React from "react";
 import { useState } from "react";
+
 
 export default function App() {
   const [showModal, setShowModal] = useState(false);
