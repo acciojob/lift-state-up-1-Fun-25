@@ -14,8 +14,8 @@ export default function App() {
         <button onClick={() => setShowModal(true)}>Show Modal</button>
         <Child show={showModal}>
           <div>
-            <h4>Modal Content</h4>
-            <h3>This is the modal content.</h3>
+            <h3>Modal Content</h3>
+            <p>This is the modal content.</p>
           </div>
         </Child>
       </div>
